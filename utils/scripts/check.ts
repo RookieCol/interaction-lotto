@@ -1,6 +1,6 @@
-import { publicClient } from "../config/client";
-import { lotteryFactory } from "../config/contracts/factory";
-import { factoryABI } from "../config/contracts/factory/abi";
+import { publicClient } from "../../config/client";
+import { lotteryFactory } from "../../config/contracts/factory";
+import { factoryABI } from "../../config/contracts/factory/abi";
 
 const looteryMasterCopy = await publicClient.readContract({
     address: lotteryFactory.address,

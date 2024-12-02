@@ -1,20 +1,7 @@
-import { walletClient } from "./config/client";
 import { lotteryFactory } from "./config/contracts/factory";
-import { factoryABI } from "./config/contracts/factory/abi";
+import type { CreateLotteryArgs } from "./utils/types";
 
-// Define args as a fixed tuple with the correct types
-const args: readonly [
-  string,            // name
-  string,            // symbol
-  number,            // numPicks
-  number,            // maxBallValue
-  bigint,            // gamePeriod
-  bigint,            // ticketPrice
-  bigint,            // communityFeeBps
-  `0x${string}`,     // prizeToken
-  bigint,            // seedJackpotDelay
-  bigint             // seedJackpotMinValue
-] = [
+const args:CreateLotteryArgs = [
   "WarpWatch PowerBALD",                     // name
   "WWPB",                                    // symbol
   5,                                         // numPicks
@@ -28,6 +15,7 @@ const args: readonly [
 ];
 
 
-const tx = lotteryFactory.write.create(args)
+const tx = await lotteryFactory.write.create(args)
+const event = await lotteryFactory.getEvents.LooteryLaunched()
 
-console.log("Simulated result:", tx);
+console.log("Tx ID:", tx);
