@@ -1,0 +1,16 @@
+{
+  "name": "interaction",
+  "module": "index.ts",
+  "type": "module",
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "ethers": "^6.13.4",
+    "viem": "^2.21.53",
+    "web3": "^4.15.0"
+  }
+}
