@@ -5,6 +5,10 @@
   "devDependencies": {
     "@types/bun": "latest"
   },
+  "scripts":{
+    "createLottery": "bun run index.ts",
+    "createLotteryEthers":"bun run utils/scripts/ethers.ts"
+  },
   "peerDependencies": {
     "typescript": "^5.0.0"
   },
