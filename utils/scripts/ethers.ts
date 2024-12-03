@@ -1,6 +1,6 @@
 import { ethers } from 'ethers';
 
-const FACTORY_ADDRESS = "0x054cb4a19bc24fe8feef7ee1404b8833b87277e4";
+const FACTORY_ADDRESS = "0xca90207F3632C27BAeabe381eB5a6772D75C11A5";
 const FACTORY_ABI = [
   {
     "inputs": [
@@ -40,7 +40,7 @@ const args: readonly [
   18, // maxBallValue
   BigInt(86400), // gamePeriod
   BigInt("99000000000000000000"), // ticketPrice
-  BigInt(10000), // communityFeeBps
+  BigInt(2000), // communityFeeBps
   "0xeb54dacb4c2ccb64f8074eceea33b5ebb38e5387", // prizeToken
   BigInt(3600), // seedJackpotDelay
   BigInt("99000000000000000000") // seedJackpotMinValue

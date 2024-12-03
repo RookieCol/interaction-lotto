@@ -9,7 +9,7 @@ const factoryAddress = {
 };
 
 const lotteryFactory = getContract({
-  address: factoryAddress.implementation as Address,
+  address: factoryAddress.proxy as Address,
   client: { public: publicClient, wallet: walletClient },
   abi: factoryABI
 });
