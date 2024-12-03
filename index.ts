@@ -24,7 +24,8 @@ const event = await lotteryFactory.getEvents.LooteryLaunched()
 
 console.log("Tx ID:", tx);
 //console.log("Event", event)
-console.log("Recipt", recipt)
+console.log("Lottery contract", recipt.logs[0].address)
+
 
 
 
